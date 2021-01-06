@@ -1,4 +1,5 @@
 from math import pi, e, sqrt, tan, log
+from decimal import Decimal
 
 print("All values and formulas are in SI units except for spectral line wavelengths, which are in angstroms.")
 
@@ -69,6 +70,8 @@ def quad(a, b, c):
     d = b**2 - 4 * a * c
     return (-b + sqrt(d)) / 2 / a, (-b - sqrt(d)) / 2 / a
 
+def sci(num):
+    return '%.2E' % num
 
 def orbital_speed(M, r, a):
     return sqrt(G * M * (2.0 / r - 1.0 / a))
